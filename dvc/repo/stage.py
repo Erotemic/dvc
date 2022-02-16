@@ -473,6 +473,7 @@ class StageLoad:
         for root, dirs, files in self.repo.dvcignore.walk(
             self.fs, self.repo.root_dir
         ):
+            logger.debug(f"Collect Repo Walking {root}")
             dvcfile_filter = partial(is_dvcfile_and_not_ignored, root)
             for file in filter(dvcfile_filter, files):
                 file_path = os.path.join(root, file)
