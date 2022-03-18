@@ -19,6 +19,7 @@ class CmdExperimentsPull(CmdBase):
             dvc_remote=self.args.dvc_remote,
             jobs=self.args.jobs,
             run_cache=self.args.run_cache,
+            dvcignore=self.repo.dvcignore,
         )
 
         ui.write(

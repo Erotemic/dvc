@@ -39,6 +39,7 @@ class CmdCheckout(CmdBase):
                 force=self.args.force,
                 relink=self.args.relink,
                 recursive=self.args.recursive,
+                dvcignore=self.repo.dvcignore,
             )
         except CheckoutError as _exc:
             exc = _exc

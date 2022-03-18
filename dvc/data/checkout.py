@@ -215,6 +215,10 @@ def checkout(
 ):
     # if scheme(fs_path) not in ["local", cache.fs.scheme]:
     #    raise NotImplementedError
+    # import xdev
+    # xdev.embed()
+    print('dvcignore = {!r}'.format(dvcignore))
+    # raise Exception
 
     diff = _diff(
         fs_path,

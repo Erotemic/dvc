@@ -265,7 +265,6 @@ class Repo:
 
     @cached_property
     def dvcignore(self) -> DvcIgnoreFilter:
-
         return DvcIgnoreFilter(self.fs, self.root_dir)
 
     def get_rev(self):
